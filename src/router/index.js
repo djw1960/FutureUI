@@ -21,7 +21,7 @@ export default new Router({
       // UserProfile 会被渲染在 User 的 <router-view> 中
       path: '/n/d',
       name:'NewsInfo',
-      component: App.components.NewsInfo
+      component: App.components.NewsInfo,
     },
     {
       path:'/c',

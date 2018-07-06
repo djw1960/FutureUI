@@ -1,6 +1,5 @@
 <template>
 <div>
-    <router-view></router-view>
     <toFHeader></toFHeader>
     <div id="ntabcontent" class="ui-tab">
     <ul class="ui-tab-nav ui-border-b">
@@ -11,7 +10,7 @@
     </ul>
     <ul class="ui-tab-content contentb" style="width:400%;">
         <li>
-            <Newsli></Newsli>
+            <Newsli :newlist="newlist"></Newsli>
         </li>
         <li></li>
         <li></li>
@@ -23,7 +22,6 @@
 </template>
 
 <script>
-import echarts from 'echarts'
 import FHeader from '@/components/share/FHeader'
 import NewsLi from '@/components/news/NewsLi'
 import {getdataPost} from '@/api/ApiList.js'
@@ -34,19 +32,26 @@ export default {
   },
   data(){
       return {
-          msg:"this is my first vue"
+          msg:"this is my first vue",
+          newlist:[]
       }
 
   },
   methods:{
-      loadNews(){
+      loadNewslist(){
+          var self=this;
           var params = {
                 no: 1010,
                 page: 1,
                 type: '',
             };
-            getdataPost(params).then(function (response) {
-                console.log(response);
+            getdataPost(params).then(function (res) {
+                if (res.data.code==0) {
+                    console.log(res.data.data.list.length);
+                    self.newlist=res.data.data.list;
+                }else{
+                    console.log(res.msg)
+                }
             }).catch(function (error) {
                 console.log(error);
             });
@@ -54,7 +59,7 @@ export default {
 
   },
   created() {
-      this.loadNews();
+      this.loadNewslist();
   },
 
 }
