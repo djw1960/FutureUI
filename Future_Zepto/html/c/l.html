@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+    <title>FrozenUI Demo</title>
+    <!-- 引入 FrozenUI -->
+    <link rel="stylesheet" href="../../css/frozenui.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/lib/zepto.min.js"></script>
+    <script src="../../js/common.js"></script>
+</head>
+<body ontouchstart>
+    <section class="ui-container">
+        <div class="index-wrap">
+            <div class="header">
+                <ul class="ui-row" style="width:100%">
+                    <li class="ui-col ui-col-80">
+                        <div class="adlogo"></div>
+                    </li>
+                    <li class="ui-col ui-col-20">
+                        <div class="userimg"></div>
+                    </li>
+                </ul>
+            </div>
+            <section>
+                <div id="cdtabcontent" class="ui-tab">
+                    <ul class="ui-tab-nav ui-border-b">
+                        <li class="current"  data-type="dce"><span>大商所</span></li>
+                        <li  data-type="czce"><span>郑商所</span></li>
+                        <li  data-type="shfe"><span>上商所</span></li>
+                    </ul>
+                    <ul class="ui-tab-content contentb" style="width:300%">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </section>
+            <div class="footer ui-footer">
+                <ul class="ui-tiled linklist">
+                    <li data-href="../index.html" class="ui-border-r">资讯</li>
+                    <li data-href="l.html" class="ui-border-r">仓单</li>
+                    <li data-href="../t/l.html" class="ui-border-r">统计局</li>
+                    <li data-href="../f/i.html" class="ui-border-r">圈子</li>
+                    <li data-href="../a/i.html">AI量化</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script src="../../js/main.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#cdtabcontent>.ui-tab-nav>li.current').trigger('click');
+        });
+    </script>
+</body>
+</html>
