@@ -14,7 +14,21 @@
 </template>
 
 <script>
+import News from '@/components/News'
+import CList from '@/components/CList'
+import TList from '@/components/TList'
+import FIndex from '@/components/FIndex'
+import AIndex from '@/components/AIndex'
+import NewsInfo from '@/components/NewsInfo'
 export default {
+  components:{
+'News':News,
+'CList':CList,
+'TList':TList,
+'FIndex':FIndex,
+'AIndex':AIndex,
+'NewsInfo':NewsInfo,
+  },
 data(){
   return{
   }

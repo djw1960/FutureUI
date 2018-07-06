@@ -1,11 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import News from '@/components/News'
-import CList from '@/components/CList'
-import TList from '@/components/TList'
-import FIndex from '@/components/FIndex'
-import AIndex from '@/components/AIndex'
-import NewsInfo from '@/components/NewsInfo'
+import App from '../App'
 
 Vue.use(Router)
 
@@ -15,41 +10,39 @@ export default new Router({
     {
       path:'/',
       name: 'News',
-      component: News
+      component: App.components.News
     },
     {
       path:'/n',
       name: 'NList',
-      component: News,
-      children:[
-        {
-          // 当 /user/:id/profile 匹配成功，
-          // UserProfile 会被渲染在 User 的 <router-view> 中
-          path: 'd',
-          name:'NewsInfo',
-          component: NewsInfo
-        }
-      ]
+      component: App.components.News
+    },
+    {
+      // 当 /user/:id/profile 匹配成功，
+      // UserProfile 会被渲染在 User 的 <router-view> 中
+      path: '/n/d',
+      name:'NewsInfo',
+      component: App.components.NewsInfo
     },
     {
       path:'/c',
       name:'CList',
-      component: CList
+      component: App.components.CList
     },
     {
       path: '/t',
       name: 'TList',
-      component: TList
+      component: App.components.TList
     },
     {
       path:'/f',
       name:'FIndex',
-      component:FIndex
+      component:App.components.FIndex
     },
     {
       path:'/a',
       name:'AIndex',
-      component:AIndex
+      component:App.components.AIndex
     }
   ]
 })
