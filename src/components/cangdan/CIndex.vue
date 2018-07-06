@@ -3,13 +3,11 @@
     <toFHeader></toFHeader>
     <div id="ntabcontent" class="ui-tab">
     <ul class="ui-tab-nav ui-border-b">
-      <li class="current"><span>最新发布</span></li>
-        <li data-type="dce"><span>大商所</span></li>
+        <li class="current" data-type="dce"><span>大商所</span></li>
         <li data-type="czce"><span>郑商所</span></li>
         <li data-type="shfe"><span>上商所</span></li>
     </ul>
-    <ul class="ui-tab-content contentb" style="width:400%;">
-        <li></li>
+    <ul class="ui-tab-content contentb" style="width:300%;">
         <li></li>
         <li></li>
         <li></li>
@@ -19,7 +17,7 @@
 </template>
 
 <script>
-import FHeader from '@/components/FHeader'
+import FHeader from '@/components/share/FHeader'
     export default {
           components:{
       'toFHeader':FHeader

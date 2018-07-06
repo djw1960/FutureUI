@@ -1,18 +1,19 @@
 <template>
     <div>
         <toFHeader></toFHeader>
-<h1>this is findex</h1>
+        <h1>this is aindex</h1>
     </div>
 </template>
 
 <script>
-import FHeader from '@/components/FHeader'
+import FHeader from '@/components/share/FHeader'
     export default {
         components:{
             'toFHeader':FHeader
         },
         data(){
-            return {}
+            return {
+            }
         },
         methods:{
 

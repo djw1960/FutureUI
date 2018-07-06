@@ -9,13 +9,12 @@ export default new Router({
   routes: [
     {
       path:'/',
-      name: 'News',
-      component: App.components.News
+      component: App.components.NIndex
     },
     {
       path:'/n',
-      name: 'NList',
-      component: App.components.News
+      name: 'NIndex',
+      component: App.components.NIndex
     },
     {
       // 当 /user/:id/profile 匹配成功，
@@ -26,13 +25,13 @@ export default new Router({
     },
     {
       path:'/c',
-      name:'CList',
-      component: App.components.CList
+      name:'CIndex',
+      component: App.components.CIndex
     },
     {
       path: '/t',
-      name: 'TList',
-      component: App.components.TList
+      name: 'TIndex',
+      component: App.components.TIndex
     },
     {
       path:'/f',

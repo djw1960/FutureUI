@@ -24,8 +24,8 @@
 
 <script>
 import echarts from 'echarts'
-import FHeader from '@/components/FHeader'
-import NewsLi from '@/components/NewsLi'
+import FHeader from '@/components/share/FHeader'
+import NewsLi from '@/components/news/NewsLi'
 import {getdataPost} from '@/api/ApiList.js'
 export default {
   components:{

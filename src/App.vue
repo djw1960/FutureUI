@@ -1,33 +1,27 @@
 <template>
   <div>
     <router-view/>
-    <div class="footer ui-footer">
-      <ul class="ui-tiled linklist">
-        <li class="ui-border-r"><router-link to="/">资讯</router-link></li>
-        <li class="ui-border-r"><router-link to="/c">仓单</router-link></li>
-        <li class="ui-border-r"><router-link to="/t">统计局</router-link></li>
-        <li class="ui-border-r"><router-link to="/f">圈子</router-link></li>
-        <li ><router-link to="/a">AI量化</router-link></li>
-      </ul>
-    </div>
+    <toFooter></toFooter>
   </div>
 </template>
 
 <script>
-import News from '@/components/News'
-import CList from '@/components/CList'
-import TList from '@/components/TList'
-import FIndex from '@/components/FIndex'
-import AIndex from '@/components/AIndex'
-import NewsInfo from '@/components/NewsInfo'
+import NIndex from '@/components/news/NIndex'
+import CIndex from '@/components/cangdan/CIndex'
+import TIndex from '@/components/tongji/TIndex'
+import FIndex from '@/components/weibo/FIndex'
+import AIndex from '@/components/ai/AIndex'
+import NewsInfo from '@/components/news/NewsInfo'
+import FFooter from '@/components/share/FFooter'
 export default {
   components:{
-'News':News,
-'CList':CList,
-'TList':TList,
+'NIndex':NIndex,
+'CIndex':CIndex,
+'TIndex':TIndex,
 'FIndex':FIndex,
 'AIndex':AIndex,
 'NewsInfo':NewsInfo,
+'toFooter':FFooter
   },
 data(){
   return{
